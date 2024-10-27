@@ -27,3 +27,8 @@ jobs:
             # Build React App
             - name: Build React App
               run: npm run build
+            # Deploy to Github pages
+            - name: Deploy to github pages
+              run: npm run deploy
+              env:
+                    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
